@@ -20,9 +20,9 @@
             <property name="nullCatalogMeansCurrent" value="true" />
         </jdbcConnection>
 
-        <javaModelGenerator targetPackage="com.caohh.perfect.model" targetProject="src/main/java"/>
+        <javaModelGenerator targetPackage="org.caohh.template.model" targetProject="src/main/java"/>
 
-        <javaClientGenerator targetPackage="com.caohh.perfect.mapper" targetProject="src/main/java"/>
+        <javaClientGenerator targetPackage="org.caohh.template.mapper" targetProject="src/main/java"/>
 
         <table tableName="%">
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
