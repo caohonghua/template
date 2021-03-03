@@ -22,7 +22,7 @@ spring:
       connection-timeout: 30000
       connection-test-query: SELECT 1
   jackson:
-    time-zone: GM+8
+    time-zone: GMT+8
     date-format: yyyy-MM-dd HH:mm:ss
 
 mybatis:
