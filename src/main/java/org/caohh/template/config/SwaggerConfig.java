@@ -9,7 +9,6 @@ import springfox.documentation.service.ApiInfo;
 import springfox.documentation.service.Contact;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
-import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @Configuration
 public class SwaggerConfig {
@@ -20,7 +19,7 @@ public class SwaggerConfig {
                 .contact(contact)
                 .title("Template")
                 .description("A Spring-Boot, Mybatis, Mybatis-Dynamic, Swagger Template Project")
-                .version("0.2")
+                .version("0.3")
                 .license("The Apache License")
                 .build();
         return new Docket(DocumentationType.OAS_30)

@@ -1,31 +1,37 @@
 server:
   port: 8080
-
 logging:
   level:
     web: DEBUG
-
 spring:
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/mysql
-    username: user
-    password: password
-    type: com.zaxxer.hikari.HikariDataSource
-    hikari:
-      minimum-idle: 1
-      maximum-pool-size: 5
-      auto-commit: true
-      idle-timeout: 60000
-      pool-name: HikariPool
-      max-lifetime: 1800000
-      connection-timeout: 30000
-      connection-test-query: SELECT 1
+  profiles:
+    active: dev
+  ### devtools
+  devtools:
+    add-properties: false
+    restart:
+      enabled: true
+  ### jackson
   jackson:
     time-zone: GMT+8
     date-format: yyyy-MM-dd HH:mm:ss
-
 mybatis:
   mapper-locations:
     - classpath:mapper/*.xml
   type-aliases-package: org.caohh.template.model
+
+### 项目自定义
+custom:
+  ### 跨域配置
+  cors:
+    mapping: "/**"
+    origins: "*"
+    credentials: true
+    methods:
+      - GET
+      - POST
+      - DELETE
+      - PUT
+    max-age: 3600
+  ###
+  auth-key: "TOKEN"
