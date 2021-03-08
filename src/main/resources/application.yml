@@ -27,6 +27,7 @@ custom:
     mapping: "/**"
     origins: "*"
     credentials: true
+    headers: "TOKEN"
     methods:
       - GET
       - POST
