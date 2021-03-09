@@ -27,7 +27,6 @@ custom:
     mapping: "/**"
     origins:
       - "http://localhost"
-      - "http://localhost:8888"
     headers:
       - "*"
     methods:
@@ -37,5 +36,5 @@ custom:
       - "PUT"
     credentials: true
     max-age: 1800
-  ###
+  ### HEADER中传递的认证标记
   auth-key: "TOKEN"
