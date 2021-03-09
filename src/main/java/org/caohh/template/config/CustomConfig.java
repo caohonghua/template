@@ -20,10 +20,10 @@ public class CustomConfig {
     @Setter
     public static class CORSConfig {
         private String mapping = "/**";
-        private String origins = "*";
-        private Boolean credentials = Boolean.TRUE;
-        private String[] headers = new String[]{};
+        private String[] origins = new String[]{"localhost"};
+        private String[] headers = new String[]{"*"};
         private String[] methods = new String[]{"GET", "POST", "DELETE", "PUT"};
-        private Long maxAge = 3600L;
+        private Boolean credentials = Boolean.TRUE;
+        private Long maxAge = 1800L;
     }
 }

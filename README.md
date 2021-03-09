@@ -17,3 +17,9 @@ Page<xxx> page = PageHelper.start(pageNum,pageSize)
 ```
 ### 跨域配置
 * 通过在application.yml中配置custom.cors， 配置跨域信息
+
+### 全局异常处理
+* GlobalExceptionHandler.java
+
+### 登陆拦截器
+* LoginInterceptor.java 结合Redis缓存数据库，利用TOKEN验证登陆

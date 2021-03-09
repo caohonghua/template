@@ -18,7 +18,8 @@ public class SwaggerConfig {
         ApiInfo info = new ApiInfoBuilder()
                 .contact(contact)
                 .title("Template")
-                .description("A Spring-Boot, Mybatis, Mybatis-Dynamic, Swagger Template Project")
+                .description("Simple java background template.  \n" +
+                        "Using Spring Boot + Mybatis + MySQL + Swagger3")
                 .version("0.3")
                 .license("The Apache License")
                 .build();

@@ -1,8 +1,8 @@
 server:
-  port: 8080
+  port: 8081
 logging:
   level:
-    web: DEBUG
+    web: INFO
 spring:
   profiles:
     active: dev
@@ -25,14 +25,17 @@ custom:
   ### 跨域配置
   cors:
     mapping: "/**"
-    origins: "*"
-    credentials: true
-    headers: "TOKEN"
+    origins:
+      - "http://localhost"
+      - "http://localhost:8888"
+    headers:
+      - "*"
     methods:
-      - GET
-      - POST
-      - DELETE
-      - PUT
-    max-age: 3600
+      - "GET"
+      - "POST"
+      - "DELETE"
+      - "PUT"
+    credentials: true
+    max-age: 1800
   ###
   auth-key: "TOKEN"
